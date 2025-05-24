@@ -133,14 +133,6 @@ git clone https://github.com/jeffreytse/zsh-vi-mode "${PWD}/zsh/custom/plugins/z
 echo 🔵 Replacing the default Git Config
 ln -sf "${PWD}/git/.gitconfig" "${HOME}"
 
-echo 🔵 Configuring Vim
-mkdir -p "${HOME}/.vim/undo"
-mkdir -p "${HOME}/.vim/backups"
-mkdir -p "${HOME}/.vim/swaps"
-ln -sf "${PWD}/vim/.vimrc" "${HOME}"
-ln -sf "${PWD}/vim/.ideavimrc" "${HOME}"
-ln -sf "${PWD}/vim/spell" "${HOME}/.vim/"
-
 echo 🔵 Linking misc files
 ln -sf "${PWD}/zsh/.zshrc" "${HOME}"
 ln -sf "${PWD}/zsh/.zprofile" "${HOME}"
