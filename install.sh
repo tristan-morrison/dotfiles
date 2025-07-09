@@ -45,6 +45,10 @@ brew install --cask karabiner-elements
 brew install --cask 1password
 brew install --cask espanso
 
+
+# Create Screen Captures directory
+mkdir -p "${HOME}/Documents/Screen Captures"
+
 # Set macOS defaults
 "${PWD}./macos.sh"
 
