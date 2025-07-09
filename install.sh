@@ -23,40 +23,27 @@ echo 🔵 Install Homebrew Formulae and Casks
 brew install curl
 brew install wget
 brew install git
+brew install emacs
 brew install git-lfs
 brew install fnm
-brew install neovim
-brew install openvpn
 brew install ffmpeg
 brew install gnupg
 brew install pinentry-mac
 brew install coreutils
+brew install gcc
 brew install grep
 brew install openssh
-brew install screen
-brew install terminal-notifier
-brew install yt-dlp
 brew install awk
-brew install macos-trash
 brew install gh
-brew install rustup
+brew install htop
+brew install gdal
 brew install python
+brew install lima
+brew install p11-kit
 brew install --cask iterm2
-# WARNING: this would install an Intel version of Docker
-brew install --cask docker
-# NOTE: at one point browser integration was only available in the
-# App Store version of bitwarden - check if that is still the case
-brew install --cask bitwarden
-brew install --cask google-chrome-beta
-brew install --cask firefox-developer-edition
-brew install --cask visual-studio-code
-brew install --cask vlc
-brew install --cask obs
-brew install --cask surfshark
-brew install --cask zoom
-brew install --cask vnc-viewer
-brew install --cask transmission
-brew install --cask raycast
+brew install --cask karabiner-elements
+brew install --cask 1password
+brew install --cask espanso
 
 # Set macOS defaults
 "${PWD}./macos.sh"
