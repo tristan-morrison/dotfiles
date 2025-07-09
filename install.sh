@@ -52,12 +52,6 @@ mkdir -p "${HOME}/Documents/Screen Captures"
 # Set macOS defaults
 "${PWD}./macos.sh"
 
-# For silicon macs
-PINETRY_LOCATION="/opt/homebrew/bin/pinentry-mac"
-
-# For Intel macs
-# PINETRY_LOCATION="/usr/local/bin/pinentry-mac"
-
 echo 🔵 Adding shortcut for Downloads directory
 ln -s "${HOME}/Downloads" "${HOME}/d"
 
@@ -84,13 +78,6 @@ echo 🔵 Cloning Git repos
   git clone https://github.com/maxpatiiuk/max.patii.uk.git
   git clone https://github.com/maxpatiiuk/text-hoarder.git
 )
-
-echo 🔵 Configure GNU PGP
-mkdir -p ~/.gnupg
-echo 'use-agent' > ~/.gnupg/gpg.conf
-chmod -R 700 ~/.gnupg
-echo 🔵 "pinentry-program ${PINETRY_LOCATION}" >> ~/.gnupg/gpg-agent.conf
-killall gpg-agent
 
 echo 🔵 Installing Node.js
 fnm install 20
