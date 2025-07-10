@@ -91,10 +91,7 @@ echo 🔵 Linking misc files
 ln -sf "${PWD}/zsh/.zshrc" "${HOME}"
 ln -sf "${PWD}/zsh/.zprofile" "${HOME}"
 ln -sf "${PWD}/zsh/.p10k.zsh" "${HOME}"
-ln -sf "${PWD}/zsh/.screenrc" "${HOME}"
 ln -sf "${PWD}/misc/.editorconfig" "${HOME}/site"
-sudo mkdir -p "/etc/docker/"
-sudo ln "${PWD}/docker/daemon.json" "/etc/docker/"
 
 echo 🔵 Hard linking common files from \`code-share\`
 ln "${HOME}/site/git/code-share/misc/images/mambo.jpg" "${HOME}/Documents/"
@@ -114,13 +111,6 @@ echo 🔵 Initializing Text Hoarder
 (
   cd "${HOME}/site/javascript/text-hoarder"
   npm i
-)
-
-echo 🔵 Installing Docker Watcher
-(
-  cd "${HOME}/site/git/specify-tools/docker_container"
-  python -m venv venv
-  venv/bin/pip install -r requirements.txt
 )
 
 echo 🔵 Linking launchctl .plist file
