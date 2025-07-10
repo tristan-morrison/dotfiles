@@ -45,6 +45,8 @@ brew install --cask karabiner-elements
 brew install --cask 1password
 brew install --cask espanso
 brew install --cask visual-studio-code
+brew install --cask opensc
+brew install --cask opensc-app
 
 # Create Screen Captures directory
 mkdir -p "${HOME}/Documents/Screen Captures"
