@@ -9,6 +9,6 @@ function start-local-apache() {
       --name apache \
       -p 127.0.0.1:80:80 \
       -p 127.0.0.1:443:443 \
-      --mount type=bind,source="${HOME_ABSOLUTE}/site",target=/usr/local/apache2/htdocs/site,rw \
+      --mount type=bind,source="${HOME_ABSOLUTE}/site/esri",target=/usr/local/apache2/htdocs/site/esri,rw \
       apache_local
 }
