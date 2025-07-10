@@ -6,16 +6,16 @@
     <!--
 
 On updates to this file, run the following:
-plutil ~/site/git/dotfiles/scripts/uk.patii.max.task.plist &&
-launchctl unload ~/Library/LaunchAgents/uk.patii.max.task.plist &&
-launchctl load ~/Library/LaunchAgents/uk.patii.max.task.plist
+plutil ~/site/git/dotfiles/scripts/farm.bisonhollow.task.plist &&
+launchctl unload ~/Library/LaunchAgents/farm.bisonhollow.task.plist &&
+launchctl load ~/Library/LaunchAgents/farm.bisonhollow.task.plist
 
 To manually trigger this task:
-launchctl start uk.patii.max.task
+launchctl start farm.bisonhollow.task
 
 -->
     <key>Label</key>
-    <string>uk.patii.max.task</string>
+    <string>farm.bisonhollow.task</string>
     <key>ProgramArguments</key>
     <array>
       <string>/bin/zsh</string>

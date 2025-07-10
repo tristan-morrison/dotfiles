@@ -95,7 +95,7 @@ ln -sf "${PWD}/misc/.editorconfig" "${HOME}/site"
 
 echo 🔵 Linking launchctl .plist file
 mkdir -p ${HOME}/Library/LaunchAgents/
-ln -sf "${PWD}/scripts/uk.patii.max.task.plist" "${HOME}/Library/LaunchAgents/"
+ln -sf "${PWD}/scripts/farm.bisonhollow.task.plist" "${HOME}/Library/LaunchAgents/"
 
 # echo 🔴 \#\#\# Private part \#\#\#
 # echo 🔴 This relies on a private \`maxpatiiuk/private-dotfiles\` repository
