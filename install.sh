@@ -44,7 +44,7 @@ brew install --cask iterm2
 brew install --cask karabiner-elements
 brew install --cask 1password
 brew install --cask espanso
-
+brew install --cask visual-studio-code
 
 # Create Screen Captures directory
 mkdir -p "${HOME}/Documents/Screen Captures"
