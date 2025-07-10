@@ -1,92 +1,17 @@
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
 [user]
-  name = Max Patiiuk
-  email = max@patii.uk
-  signingkey = D8E9A0875B6369D2
+	name = Tristan Morrison
+	email = tmorrison@esri.com
 [core]
-  autocrlf = input
-  editor = code --wait
-  whitespace = tab-in-indent,blank-at-eol,-blank-at-eof
-  attributesfile = ~/site/git/dotfiles/git/.gitattributes
-  excludesfile = ~/site/git/dotfiles/git/.gitignore_global
-  hooksPath = ~/site/git/pre-commit-tools/pre-commit-tools
-  untrackedCache = true
-[apply]
-  whitespace = fix
-[branch]
-  sort = -committerdate
-[commit]
-  gpgsign = true
-[diff]
-  tool = default-difftool
-  mnemonicPrefix = true
-  colorMoved = default
-  renames = copies
-  algorithm = histogram
-  noprefix = true
-[difftool "default-difftool"]
-  cmd = code --wait --diff $LOCAL $REMOTE
+	excludesfile = ~/site/git/dotfiles/git/.gitignore_global
+	editor = emacsclient -t -a=
 [init]
-  defaultBranch = main
-[pull]
-  rebase = true
-[rebase]
-  autoStash = true
-[merge]
-  tool = code
-[mergetool "code"]
-  cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
-[rerere]
-  enabled = true
-  autoupdate = true
-[blame]
-  date = relative
-  coloring = highlightRecent
-[submodule]
-  recurse = true
-[credential]
-  helper = !git credential-$([ "$(uname 2> /dev/null)" = "Darwin" ] && echo "osxkeychain" || echo "store") "$@"
-[help]
-  autocorrect = immediate
-[color "status"]
-  header = cyan
-  untracked = white bold red
-[color "branch"]
-  upstream = cyan
-[core "whitespace"]
-  tabwidth = 2
-[fetch]
-  recurseSubmodules = on-demand
-  all = true
-[log]
-  abbrevCommit = true
+	defaultBranch = main
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
 [push]
-  followTags = true
-  autoSetupRemote = true
-[status]
-  submoduleSummary = true
-[tag]
-  sort = version:refname
-  gpgSign = true
-[versionsort]
-  prereleaseSuffix = -pre
-  prereleaseSuffix = .pre
-  prereleaseSuffix = -beta
-  prereleaseSuffix = .beta
-  prereleaseSuffix = -rc
-  prereleaseSuffix = .rc
-[filter "t2s"]
-  clean = expand -t 2
-[gpg]
-  program = gpg
-[advice]
-  statusHints = false
-[lfs]
-  concurrenttransfers = 64
-  storage = /Users/mak13180/.cache/lfs
+	autoSetupRemote = true
 [diff "lfs"]
-  textconv = cat
+	textconv = cat
