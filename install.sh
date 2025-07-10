@@ -93,13 +93,6 @@ ln -sf "${PWD}/zsh/.zprofile" "${HOME}"
 ln -sf "${PWD}/zsh/.p10k.zsh" "${HOME}"
 ln -sf "${PWD}/misc/.editorconfig" "${HOME}/site"
 
-echo 🔵 Initializing Dir Explorer
-(
-  cd "${HOME}/site/python/dir-explorer"
-  python -m venv venv
-  venv/bin/pip install -r requirements.txt
-)
-
 echo 🔵 Initializing Text Hoarder
 (
   cd "${HOME}/site/javascript/text-hoarder"
