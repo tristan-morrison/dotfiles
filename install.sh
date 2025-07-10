@@ -52,9 +52,6 @@ mkdir -p "${HOME}/Documents/Screen Captures"
 # Set macOS defaults
 "${PWD}./macos.sh"
 
-echo 🔵 Adding shortcut for Downloads directory
-ln -s "${HOME}/Downloads" "${HOME}/d"
-
 echo 🔵 Creating directories
 mkdir -p "${HOME}/site/git"
 
