@@ -97,18 +97,14 @@ echo 🔵 Linking launchctl .plist file
 mkdir -p ${HOME}/Library/LaunchAgents/
 ln -sf "${PWD}/scripts/uk.patii.max.task.plist" "${HOME}/Library/LaunchAgents/"
 
-echo 🔵 Update VS Code Icon
-mv "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns" "/Applications/Visual Studio Code.app/Contents/Resources/Code_original.icns"
-cp "./vscode/icon.icns" "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns"
+# echo 🔴 \#\#\# Private part \#\#\#
+# echo 🔴 This relies on a private \`maxpatiiuk/private-dotfiles\` repository
+# echo 🔴 You should comment out this part or replace it with your own
+# echo 🔴 private repository
 
-echo 🔴 \#\#\# Private part \#\#\#
-echo 🔴 This relies on a private \`maxpatiiuk/private-dotfiles\` repository
-echo 🔴 You should comment out this part or replace it with your own
-echo 🔴 private repository
-
-(
-  cd "${HOME}/site/git/"
-  git clone https://github.com/maxpatiiuk/private-dotfiles.git
-  cd private-dotfiles
-  ./install.sh
-)
+# (
+#   cd "${HOME}/site/git/"
+#   git clone https://github.com/maxpatiiuk/private-dotfiles.git
+#   cd private-dotfiles
+#   ./install.sh
+# )
