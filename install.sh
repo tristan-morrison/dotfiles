@@ -93,12 +93,6 @@ ln -sf "${PWD}/zsh/.zprofile" "${HOME}"
 ln -sf "${PWD}/zsh/.p10k.zsh" "${HOME}"
 ln -sf "${PWD}/misc/.editorconfig" "${HOME}/site"
 
-echo 🔵 Initializing Text Hoarder
-(
-  cd "${HOME}/site/javascript/text-hoarder"
-  npm i
-)
-
 echo 🔵 Linking launchctl .plist file
 mkdir -p ${HOME}/Library/LaunchAgents/
 ln -sf "${PWD}/scripts/uk.patii.max.task.plist" "${HOME}/Library/LaunchAgents/"
