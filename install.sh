@@ -92,6 +92,7 @@ ln -sf "${PWD}/zsh/.zshrc" "${HOME}"
 ln -sf "${PWD}/zsh/.zprofile" "${HOME}"
 ln -sf "${PWD}/zsh/.p10k.zsh" "${HOME}"
 ln -sf "${PWD}/misc/.editorconfig" "${HOME}/site"
+ln -sf "${PWD}/karabiner/karabiner.json" "${HOME}/.config/karabiner/karabiner.json"
 
 echo 🔵 Linking launchctl .plist file
 mkdir -p ${HOME}/Library/LaunchAgents/
