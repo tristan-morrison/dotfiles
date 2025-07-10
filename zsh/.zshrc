@@ -29,6 +29,10 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-syntax-highlighting z)
 
+# Disable checks for update on startup of each shell - I do it in a scheduled
+# job instead. This reduces startup time by 7ms.
+zstyle ':omz:update' mode disabled
+
 ZSH_CUSTOM="${HOME}/site/git/dotfiles/zsh/custom"
 source $ZSH/oh-my-zsh.sh
 source ~/.p10k.zsh
