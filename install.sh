@@ -93,13 +93,6 @@ ln -sf "${PWD}/zsh/.zprofile" "${HOME}"
 ln -sf "${PWD}/zsh/.p10k.zsh" "${HOME}"
 ln -sf "${PWD}/misc/.editorconfig" "${HOME}/site"
 
-echo 🔵 Hard linking common files from \`code-share\`
-ln "${HOME}/site/git/code-share/misc/images/mambo.jpg" "${HOME}/Documents/"
-ln "${HOME}/site/git/code-share/misc/images/max_patiiuk_old.jpg" "${HOME}/Documents/"
-ln "${HOME}/site/git/code-share/misc/images/max_patiiuk_1x1.jpg" "${HOME}/Documents/"
-ln "${HOME}/site/git/code-share/misc/images/max_patiiuk.jpg" "${HOME}/Documents/"
-ln "${HOME}/site/git/code-share/misc/images/wolf.jpg" "${HOME}/Documents/"
-
 echo 🔵 Initializing Dir Explorer
 (
   cd "${HOME}/site/python/dir-explorer"
