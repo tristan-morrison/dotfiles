@@ -1,48 +1,12 @@
-source ~/site/git/private-dotfiles/zsh/custom/env.sh
+# source ~/site/git/private-dotfiles/zsh/custom/env.sh
 
-### basic
-alias ls="ls -G1"
-alias ll="ls -GahlFT%"
-alias l="python3 ~/site/python/dir-explorer/dir_explorer/list_files.py"
-
-### cd && l/ls
-function cl() {
-  DIR="$*"
-  # if no DIR given, go home
-  if [ $# -lt 1 ]; then
-    DIR=$HOME
-  fi
-  builtin cd "${DIR}" && l
+# launches emacsclient, creating a new instance of emacs daemon if none is running
+function emc()
+{
+  # -c creates a new frame
+  # -a= fires a new emacs server if none is running
+  emacsclient -c -a= $*
 }
-compdef cl=cd
-
-### one line servers
-alias pw="python3 -m http.server 8080"
-
-### shortcuts
-alias v="nvim"
-alias vp="v package.json"
-alias neovim="nvim"
-alias vim="nvim"
-alias p="python3"
-alias n="node"
-alias ni="node --inspect"
-alias nib="node --inspect-brk"
-alias vimdiff="nvim -d"
-
-function m() {
-  if [ ! -t 0 ]; then
-    # stdin is piped into the function
-    more
-  elif [ "$#" -eq 0 ]; then
-    npm install
-  else
-    npm "$@"
-  fi
-}
-
-# make zsh know about hosts already accessed by SSH
-zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 
 # Colored man pages
 # See https://unix.stackexchange.com/questions/119/colors-in-man-pages
@@ -53,6 +17,10 @@ export LESS_TERMCAP_us=$'\e[01;32m'    # begin underline (green fg)
 export LESS_TERMCAP_me=$'\e[0m'        # reset bold/blink
 export LESS_TERMCAP_se=$'\e[0m'        # reset reverse video
 export LESS_TERMCAP_ue=$'\e[0m'        # reset underline
+
+# Play a notification sound. Useful when chained at the end of another
+# program
+alias notify="afplay /System/Library/Sounds/Funk.aiff &>/dev/null &"
 
 # Exit with the exit code of previous command
 # Usage:
@@ -65,4 +33,25 @@ export LESS_TERMCAP_ue=$'\e[0m'        # reset underline
 #   failure case
 good() {
   return $?
+}
+
+# Force-quits the Global Protect desktop client; useful when client is
+# disconnected and hangs waiting for credentials. At time of writing,
+# a bug in the Global Protect client causes it to occasionally get
+# stuck in a state in which it is waiting for user to provide
+# credentials via the embedded browser, but never actually displays
+# the embedded browser.
+function kill-gp() {
+    # the argument to kill is an inline script to get the PID of the
+    # Global Protect client app
+    # ps -ax : lists the process
+    # ggrep -oP : scans the `ps` output for the line pertaining to
+    #             the Global Protect app.
+    #               * -o causes only the the matching part of the
+    #                 matched line to be output
+    #               * -P specifies Perl regex
+    #               * The regex pattern arg matches the PID, and
+    #                 uses a zero-length lookahead assertion to
+    #                 match only the line for the GP app
+    kill $(ps -ax | ggrep -oP "[0-9]+ (?=.*[\d+:\d+.\d+|] \/Applications\/GlobalProtect.app\/Contents\/MacOS\/GlobalProtect$)")
 }
