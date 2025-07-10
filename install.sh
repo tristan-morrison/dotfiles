@@ -67,15 +67,11 @@ echo 🔵 Cloning Git repos
 echo 🔵 Installing Node.js
 fnm install 20
 
-echo 🔵 Installing Rust
-rustup default stable
-
 echo 🔵 Install global Python dependencies
 pip install wheel
 
 echo 🔵 Install global NPM dependencies
 npm install -g npm-check-updates
-npm install -g clipboardy
 npm install -g typescript-language-server
 
 echo 🔵 Installing oh-my-zsh
