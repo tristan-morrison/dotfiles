@@ -80,14 +80,12 @@ echo 🔵 Deleting default oh-my-zsh configs
 rm "${HOME}/.oh-my-zsh/lib/bzr.zsh"
 rm "${HOME}/.oh-my-zsh/lib/diagnostics.zsh"
 rm "${HOME}/.oh-my-zsh/lib/directories.zsh"
-rm "${HOME}/.oh-my-zsh/lib/key-bindings.zsh"
 
 echo 🔵 Installing Powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${PWD}/zsh/custom/themes/powerlevel10k
 
 echo 🔵 Installing other ZSH plugins
-git clone https://github.com/zsh-users/zsh-autosuggestions ${PWD}/zsh/custom/plugins/zsh-autosuggestions
-git clone https://github.com/jeffreytse/zsh-vi-mode "${PWD}/zsh/custom/plugins/zsh-vi-mode"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${PWD}/zsh/custom/plugins/zsh-syntax-highlighting
 
 echo 🔵 Replacing the default Git Config
 ln -sf "${PWD}/git/.gitconfig" "${HOME}"
