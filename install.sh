@@ -57,26 +57,11 @@ ln -s "${HOME}/Downloads" "${HOME}/d"
 
 echo 🔵 Creating directories
 mkdir -p "${HOME}/site/git"
-mkdir -p "${HOME}/site/python"
-mkdir -p "${HOME}/site/javascript"
 
 echo 🔵 Cloning Git repos
 (
-  cd "${HOME}/site/python"
-  git clone https://github.com/specify/specify7.git
-  git clone https://github.com/maxpatiiuk/dir-explorer.git
-)
-(
   cd "${HOME}/site/git"
-  git clone https://github.com/specify/specify-tools.git
-  git clone https://github.com/maxpatiiuk/custom-new-tab-page.git
-  git clone https://github.com/maxpatiiuk/code-share.git
-  git clone https://github.com/maxpatiiuk/dotfiles.git
-)
-(
-  cd "${HOME}/site/javascript"
-  git clone https://github.com/maxpatiiuk/max.patii.uk.git
-  git clone https://github.com/maxpatiiuk/text-hoarder.git
+  git clone https://github.com/tristan-morrison/dotfiles.git
 )
 
 echo 🔵 Installing Node.js
