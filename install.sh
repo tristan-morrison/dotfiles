@@ -48,6 +48,7 @@ brew install --cask visual-studio-code
 brew install --cask opensc
 brew install --cask opensc-app
 brew install --cask itsycal
+brew install --cask logi-options+
 
 # Create Screen Captures directory
 mkdir -p "${HOME}/Documents/Screen Captures"
