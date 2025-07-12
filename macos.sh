@@ -9,6 +9,13 @@ defaults write com.apple.screencapture location -string "${HOME}/Documents/Scree
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 
+# Key repeat interval
+defaults write -g KeyRepeat -float 2.0
+defaults write -g InitialKeyRepeat -float 15.0
+
+# Use f-keys as standard function keys
+defaults write -g com.apple.keyboard.fnState -bool true
+
 # Set ~/Downloads as the default finder location
 defaults write com.apple.finder NewWindowTarget -string "PfDe"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Downloads/"
