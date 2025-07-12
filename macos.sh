@@ -22,6 +22,9 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Finder: hide status bar
 defaults write com.apple.finder ShowStatusBar -bool false
 
+# Use list view by default
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
