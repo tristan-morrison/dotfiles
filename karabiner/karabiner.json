@@ -4,6 +4,26 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Open calculator on keyboard macro chord",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "modifiers": {
+                                        "mandatory": ["right_control"],
+                                        "optional": ["caps_lock"]
+                                    },
+                                    "simultaneous": [
+                                        { "key_code": "c" },
+                                        { "key_code": "a" },
+                                        { "key_code": "l" }
+                                    ]
+                                },
+                                "to": [{ "shell_command": "open '/System/Applications/Calculator.app'" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Launch apps by right shift+letters.",
                         "manipulators": [
                             {
