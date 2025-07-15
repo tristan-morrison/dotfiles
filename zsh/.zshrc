@@ -37,4 +37,8 @@ ZSH_CUSTOM="${HOME}/site/git/dotfiles/zsh/custom"
 source $ZSH/oh-my-zsh.sh
 source ~/.p10k.zsh
 
+# homebrew env setup
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# fnm env setup
 eval "$(fnm env --shell zsh --corepack-enabled)"
