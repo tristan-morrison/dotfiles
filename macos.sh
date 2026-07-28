@@ -13,6 +13,9 @@ defaults write com.apple.screencapture disable-shadow -bool true
 defaults write -g KeyRepeat -float 2.0
 defaults write -g InitialKeyRepeat -float 15.0
 
+# Disable automatic period insertion on double-press of spacebar
+defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
+
 # Use f-keys as standard function keys
 defaults write -g com.apple.keyboard.fnState -bool true
 
