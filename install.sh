@@ -34,6 +34,7 @@ brew install gcc
 brew install grep
 brew install openssh
 brew install awk
+brew install rg
 brew install gh
 brew install htop
 brew install gdal
